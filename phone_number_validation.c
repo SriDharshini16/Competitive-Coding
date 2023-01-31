@@ -28,8 +28,9 @@ int main() {
             int c = a%10;
             arr[i]=c;
             a=a/10;
+            count++;
         }
-        if(arr[9]>=6 && arr[9]<=9){
+        if(arr[count-1]>=6 && arr[count-1]<=9){
         printf("valid phone number");
         }
     }
