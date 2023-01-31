@@ -7,7 +7,7 @@ int main() {
     scanf("%d",&a);
     
     for(a;a>=1;a=a/10){
-        printf("%d \n",a%10);
+        printf("%d",a%10);
     }
     return 0;
 }
