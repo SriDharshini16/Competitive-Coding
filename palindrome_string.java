@@ -14,7 +14,21 @@ public class palindrome_rev {
         }
         return false;
     }
-    public static void main(String[] args) {
+    // or by comaparing without using another string
+	public static boolean isPalindrome(String s){
+        String str = s.replaceAll("[^a-zA-Z0-9]", " ").replaceAll("\\s+", "");
+        str = str.toLowerCase();
+	int strt =0,end=s.length()-1;
+	while(strt<end){
+	   if(s.charAt(strt)!=s.charAt(end){
+	       return false;
+	   }
+	   strt++;
+	   end--;
+	}
+	return true;
+	}
+   	public static void main(String[] args) {
         String s = "A man, a plan, a canal: Panama";
         boolean res = isPalindrome(s);
         System.out.println(res);
