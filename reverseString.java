@@ -1,27 +1,27 @@
 //Revering the words in a string
-public class reverseWords {
-
-	public static String reverseWords(String s) {
+public class reveringString {
+	
+	public static String revWords(String str) {
+		String rev ="";
+		int current = 0,i=0;
+		for(;i<str.length();i++) {
+			if(str.charAt(i)==' ') {
+				rev = str.substring(current, i)+" "+rev;
+				current = i+1;
+			}
+		}
+		rev = str.substring(current, i)+ " "+rev;
 		
-		int i=s.length()-1;
-        String ans="";
-        while(i>=0){
-            while(i>=0 && s.charAt(i)==' ') i--;
-            int j=i;
-            if(i<0) break;
-            while(i>=0 && s.charAt(i)!=' ') i--;
-            if(ans.isEmpty()){
-                ans=ans.concat(s.substring(i+1,j+1));
-            }else{
-                ans=ans.concat(" "+s.substring(i+1,j+1));
-            }
-        }
-        return ans;
+		return rev;
 	}
+
 	public static void main(String[] args) {
-		String str = "hello i am sri";
-		System.out.println(reverseWords(str));
+		String str ="Happy Ugadi...";
+		String str1 = revWords(str);
+		System.out.println(str1);
+		
 
 	}
 
 }
+
